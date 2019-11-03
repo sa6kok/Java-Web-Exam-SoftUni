@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+<ui:include src="templates/head.xhtml"/>
+<h:body>
+    <main>
+        <ui:include src="templates/guest-nav.xhtml"/>
+        <h1 class="text-center">Register</h1>
+        <hr class="hr-3"/>
+        <h:form class="mx-auto w-15">
+            <div class="form-group">
+                <div class="label-holder textCol d-flex justify-content-center">
+                    <label for="username" class="h4 mb-2 text-white">Username</label>
+                </div>
+                <h:inputText class="form-control" id="username" value="#{registerBean.userBindingModel.username}"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder text-white textCol d-flex justify-content-center">
+                    <label for="email" class="h4 mb-2">Email</label>
+                </div>
+                <h:inputText class="form-control" id="email" name="email"
+                             value="#{registerBean.userBindingModel.email}"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder text-white textCol d-flex justify-content-center">
+                    <label for="password" class="h4 mb-2">Password</label>
+                </div>
+                <h:inputSecret class="form-control" id="password" value="#{registerBean.userBindingModel.password}"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder text-white textCol d-flex justify-content-center">
+                    <label for="confirmPassword" class="h4 mb-2">Confirm Password</label>
+                </div>
+                <h:inputSecret class="form-control" id="confirmPassword"
+                               value="#{registerBean.userBindingModel.confirmPassword}"/>
+            </div>
+            <div class="form-group">
+                <div class="label-holder text-white textCol d-flex justify-content-center">
+                    <label for="country" class="h4 mb-2">Country</label>
+                </div>
+                <h:inputText class="form-control" id="country" name="country"
+                             value="#{registerBean.userBindingModel.country}"/>
+            </div>
+            <div class="button-holder d-flex justify-content-center">
+                <h:commandButton action="#{registerBean.save}" class="btn btn-info text-white" value="Register"/>
+            </div>
+        </h:form>
+    </main>
+    <ui:include src="templates/footer.xhtml"/>
+</h:body>
+</html>
