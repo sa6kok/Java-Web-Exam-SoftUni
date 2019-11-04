@@ -19,10 +19,10 @@
                 <div class="col-md-3 d-flex flex-column text-center mb-3">
                     <h:graphicImage library="img" name="#{hero.clazz}.jpg" class="img-thumb" width="300" height="300"/>
                     <h5 class="text-white text-center">#{hero.name}</h5>
-                    <h:link class="btn btn-info mb-2" outcome="details-hero?id=#{hero.id}" value="Details">
+                    <h:link class="btn btn-info mb-2" outcome="details-hero" value="Details">
                         <f:param name="heroId" value="#{hero.id}" />
                     </h:link>
-                    <h:link class="btn btn-danger" value="Delete" outcome="delete-hero?id=#{hero.id}">
+                    <h:link class="btn btn-danger" value="Delete" outcome="delete-hero">
                         <f:param name="heroId" value="#{hero.id}" />
                     </h:link>
                 </div>
